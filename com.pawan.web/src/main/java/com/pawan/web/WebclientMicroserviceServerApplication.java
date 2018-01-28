@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
 public class WebclientMicroserviceServerApplication {
 	
-	public static final String ACCOUNTS_SERVICE_URL = "http://ACCOUNTS-MICROSERVICE";
+	//public static final String ACCOUNTS_SERVICE_URL = "http://ACCOUNTS-MICROSERVICE";
 	
 	public static void main(String[] args) {
 		SpringApplication.run(WebclientMicroserviceServerApplication.class, args);
@@ -27,8 +27,9 @@ public class WebclientMicroserviceServerApplication {
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
-	@Bean
+	
+	/*@Bean
 	public AccountRepository accountRepository(){
 		return new RemoteAccountRepository(ACCOUNTS_SERVICE_URL);
-	}
+	}*/
 }
